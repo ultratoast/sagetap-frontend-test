@@ -1,16 +1,41 @@
-.App {
-  text-align: center;
-}
-
 .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.loading-spinner {
+  position: relative;
+  padding-right: 50px;
+}
+
+
+.loading-spinner:after {
+    content: '*';
+    position: absolute;
+    top: 5px;
+    right: 20px;
+    line-height: 1;
+    width: 20px;
+    height: 10px;
+    display: inline-block;
   }
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo,.loading-spinner:after {
+    animation: App-logo-spin infinite 2s linear;
+  }
+}
+
+.artwork-item {
+  position: relative;
+}
+
+.close-toast {
+  position: absolute;
+  top: 2px;
+  right: -20px;
+  font-size: 10px;
+  font-weight: bold;
 }
 
 .App-header {
